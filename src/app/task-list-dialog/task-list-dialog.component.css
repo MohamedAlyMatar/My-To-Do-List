@@ -1,0 +1,78 @@
+/* Ensure the dialog is centered and properly styled */
+.list-header {
+
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+}
+
+.mat-dialog-container {
+    padding: 20px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.input-container {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    border: 3px solid black;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.delete-button {
+    color: white;
+    background-color: red;
+}
+
+.no-tasks {
+    padding-left: 0.5rem;
+}
+
+.tasks {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}

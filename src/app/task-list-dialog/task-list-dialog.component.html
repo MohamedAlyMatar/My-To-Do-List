@@ -1,0 +1,33 @@
+<div class="list-header">
+    <h1 mat-dialog-title>{{ data.list.name }}</h1>
+    <button mat-dialog-close (click)="exitList()">X</button>
+</div>
+<div mat-dialog-content>
+
+    <div class="flex items-center mb-6">
+        <input type="text" placeholder="Add a new task" [(ngModel)]="newTask" (keydown.enter)="addTask()"
+            class="input-container" />
+        <button class="add-button" (click)="addTask()">Add</button>
+    </div>
+
+    <div class="no-tasks" *ngIf="data.list.tasks.length === 0">
+        <p>No tasks in this list</p>
+    </div>
+    <div *ngFor="let task of data.list.tasks">
+        <div class="tasks">
+            <div class="task">
+                <input type="checkbox" [checked]="task.completed" (change)="toggleTaskCompletion(task.id)"
+                    class="mr-4" />
+                <label [class.line-through]="task.completed">
+                    {{ task.text }}
+                </label>
+            </div>
+            <button (click)="deleteTask(task.id)" class="delete-button text-muted-foreground hover:text-foreground">
+                🗑️
+            </button>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button class="delete-button" (click)="deleteList()" >Delete List</button>
+</div>
