@@ -89,6 +89,7 @@ button:hover {
 }
 
 .main-body {
+    padding: 10px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -100,7 +101,9 @@ button:hover {
 
 .left-side {
     width: 50%;
-}
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #9cd1fb;}
 
 .input-container {
     margin-right: 10px;
@@ -149,8 +152,8 @@ input[type="text"]:focus {
 
 .divider {
     width: 1px;
-    background-color: black;
-    margin: 20px;
+    /* background-color: black; */
+    margin: 10px;
 }
 
 /* Right Side */
@@ -166,6 +169,8 @@ input[type="text"]:focus {
 
 
 .right-side {
+    border-radius: 10px;
+    padding: 10px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -176,22 +181,29 @@ input[type="text"]:focus {
 
 @media screen and (max-width: 650px) {
     .main-body {
+        padding: 10px;
         flex-direction: column;
         width: 100%;
+        transition: padding 0.9s ease, flex-direction 0.9s ease, width 0.9s ease;
     }
 
     .divider {
         height: 1px;
-        width: 100%;
-        background-color: black;
+        width: auto;
+        /* background-color: black; */
         margin-block: 1.5rem;
+        transition: height 0.9s ease, width 0.9s ease, margin-block 0.9s ease, background-color 0.9s ease;
     }
 
     .left-side {
-        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #9cd1fb;
     }
 
+    .left-side,
     .right-side {
-        width: 100%;
+        width: auto;
+        transition: width 0.9s ease;
     }
 }
